@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add money
+{% endblock %}
+
+{% block apology %}
+    {% if apology %}
+        {{ apology }}
+    {% endif %}
+{% endblock %}
+
+{% block success %}
+    {% if success %}
+        {{ success }}
+    {% endif %}
+{% endblock %}
+{% block main %}
+    <form action="/add_money" method="post">
+        <div class="form-group">
+            <input
+            name="money"
+            class="form-control"
+            type="number"
+            step="0.01"
+            placeholder="Money"
+            />
+        </div>
+
+        <button class="btn btn-primary" type="submit">Add</button>
+
+    </form>
+{% endblock %}

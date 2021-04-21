@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quote
+{% endblock %}
+
+{% block apology %}
+    {% if apology %}
+        {{ apology }}
+    {% endif %}
+{% endblock %}
+
+{% block success %}
+    {% if success %}
+        {{ success }}
+    {% endif %}
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="POST">
+        <div class="form-group">
+            <input autofocus placeholder="Stock" class="form-control" name="symbol" type="text" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Quote</button>
+        </div>
+    </form>
+    {% block result %}{% endblock %}
+{% endblock %}

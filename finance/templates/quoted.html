@@ -1,0 +1,18 @@
+{% extends "quote.html" %}
+
+{% block result %}
+    <table class="table table-hover w-50 mx-auto my-5">
+        <thead>
+            <th scope="col">Symbol</th>
+            <th scope="col">Company</th>
+            <th scope="col">Price</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ quote["symbol"] }}</td>
+                <td>{{ quote["name"] }}</td>
+                <td>{{ usd(quote["price"]) }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

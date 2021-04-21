@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Share&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="bodyContainer">
+      <div id="main-header">
+        <div id="polygon"></div>
+        <img src="assets/logo.svg" />
+        <div id="clock"></div>
+      </div>
+      <div class="container">
+        <!-- page 1 -->
+        <div class="page pageListTimeBoxes">
+          <button
+            value="2"
+            id="newBtn"
+            class="btn primary-btn justify_self_center align_self_center"
+          >
+            New
+            <span class="material-icons btn-icon">add</span>
+          </button>
+
+          <ul id="timBoxUl"></ul>
+
+          <div class="infoBox">
+            <span class="material-icons">help_outline</span>
+            <span>ABOUT</span>
+          </div>
+
+          <!-- <button id="clear" type="button">Clear TimeBoxes</button> -->
+          <!-- <button id="getAll" type="button">Get All TimeBoxes</button> -->
+        </div>
+        <!-- page 2 -->
+        <div class="page pageNewTimeBox">
+          <header>
+            <button value="1" id="backButton">
+              <span class="material-icons">arrow_back</span>
+            </button>
+            <h2>New TimeBox</h2>
+          </header>
+          <form id="newTimeBox">
+            <div class="inputControl">
+              <label for="label">Label:</label>
+              <div class="inputWrapper">
+                <input
+                  name="label"
+                  type="text"
+                  placeholder="BoxLabel"
+                  autocomplete="off"
+                  maxlength="28"
+                />
+              </div>
+            </div>
+
+            <div class="timeAndConfirm">
+              <div class="inputControl">
+                <label for="timeout">Time:</label>
+                <div class="inputWrapper time">
+                  <div>
+                    <input
+                      name="hour"
+                      type="number"
+                      placeholder="00"
+                      autocomplete="off"
+                    />
+                    <span>h</span>
+                  </div>
+                  <div class="vl"></div>
+                  <div>
+                    <input
+                      name="minutes"
+                      type="number"
+                      placeholder="00"
+                      autocomplete="off"
+                    />
+                    <span>m</span>
+                  </div>
+                  <span id="timeErrorMessage" class="errorMessage"></span>
+                </div>
+              </div>
+              <button type="submit" id="newBtn" class="btn primary-btn">
+                Set
+                <span class="material-icons btn-icon green">check</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/popup.js"></script>
+  </body>
+</html>
